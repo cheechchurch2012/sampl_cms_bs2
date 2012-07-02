@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/resolve/refinerycms-search.git
+  revision: 004f63b0d9b0f833a3cbb35fc08086921882af17
+  branch: 2-0-stable
+  specs:
+    refinerycms-search (2.0.0)
+      refinerycms-core (~> 2.0.4)
+
 PATH
   remote: vendor/extensions
   specs:
@@ -34,6 +42,8 @@ GEM
     activesupport (3.2.6)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    acts-as-taggable-on (2.3.1)
+      rails (~> 3.0)
     acts_as_indexed (0.7.8)
     arel (3.0.2)
     awesome_nested_set (2.1.3)
@@ -49,6 +59,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.3.3)
+    commonjs (0.2.6)
     devise (2.0.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -59,6 +70,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    filters_spam (0.3)
     friendly_id (4.0.7)
     globalize3 (0.2.0)
       activemodel (>= 3.0.0)
@@ -71,6 +83,12 @@ GEM
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
     json (1.7.3)
+    less (2.2.1)
+      commonjs (~> 0.2.6)
+    less-rails (2.2.3)
+      actionpack (>= 3.1)
+      less (~> 2.2.0)
+    libv8 (3.3.10.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -97,6 +115,8 @@ GEM
       activesupport (= 3.2.6)
       bundler (~> 1.0)
       railties (= 3.2.6)
+    rails_autolink (1.0.9)
+      rails (~> 3.1)
     railties (3.2.6)
       actionpack (= 3.2.6)
       activesupport (= 3.2.6)
@@ -119,6 +139,13 @@ GEM
       devise (~> 2.0.0)
       orm_adapter (~> 0.0.7)
       refinerycms-core (= 2.0.5)
+    refinerycms-blog (2.0.4)
+      acts-as-taggable-on
+      filters_spam (~> 0.2)
+      rails_autolink
+      refinerycms-core (~> 2.0.3)
+      refinerycms-settings (~> 2.0.1)
+      seo_meta (~> 1.3.0)
     refinerycms-core (2.0.5)
       acts_as_indexed (~> 0.7.7)
       awesome_nested_set (~> 2.1.3)
@@ -140,6 +167,14 @@ GEM
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
       refinerycms-core (= 2.0.5)
+    refinerycms-inquiries (2.0.3)
+      filters_spam (~> 0.2)
+      refinerycms-core (~> 2.0.1)
+      refinerycms-settings (~> 2.0.1)
+    refinerycms-news (2.0.1)
+      friendly_id (~> 4.0.1)
+      refinerycms-core (~> 2.0.1)
+      refinerycms-settings (~> 2.0.0)
     refinerycms-page-images (2.0.1)
       refinerycms-pages (~> 2.0.0)
     refinerycms-pages (2.0.5)
@@ -151,6 +186,8 @@ GEM
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
       refinerycms-core (= 2.0.5)
+    refinerycms-settings (2.0.1)
+      refinerycms-core (~> 2.0.1)
     refinerycms-videojs (0.5.5)
       dragonfly
       rack-cache
@@ -169,12 +206,19 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.6)
+    therubyracer (0.10.1)
+      libv8 (~> 3.3.10)
     thor (0.15.3)
     tilt (1.3.3)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.5.5)
+    twitter-bootstrap-rails (2.1.0)
+      actionpack (>= 3.1)
+      less-rails (~> 2.2.2)
+      railties (>= 3.1)
+      therubyracer (~> 0.10.1)
     tzinfo (0.3.33)
     uglifier (1.2.5)
       execjs (>= 0.3.0)
@@ -192,10 +236,15 @@ DEPENDENCIES
   jquery-rails
   rails (= 3.2.6)
   refinerycms (~> 2.0.0)
+  refinerycms-blog (~> 2.0.0)
   refinerycms-events!
   refinerycms-i18n (~> 2.0.0)
+  refinerycms-inquiries (~> 2.0.0)
+  refinerycms-news (~> 2.0.0)
   refinerycms-page-images (~> 2.0.0)
+  refinerycms-search (~> 2.0.0)!
   refinerycms-videojs
   sass-rails (~> 3.2.3)
   sqlite3
+  twitter-bootstrap-rails
   uglifier (>= 1.0.3)

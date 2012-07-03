@@ -57,3 +57,5 @@ gem 'refinerycms-events', :path => 'vendor/extensions'
 group :production do
   gem 'pg'
 end
+
+gem 'fog'

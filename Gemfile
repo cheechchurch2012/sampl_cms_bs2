@@ -53,6 +53,8 @@ gem "refinerycms-news", '~> 2.0.0'
 gem 'refinerycms-page-images', '~> 2.0.0'
 gem 'refinerycms-videojs'
 gem 'refinerycms-events', :path => 'vendor/extensions'
+gem 'refinerycms-settings'
+# gem 'refinerycms-memberships', '1.0', :path => 'vendor/extensions'
 
 group :production do
   gem 'pg'

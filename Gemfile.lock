@@ -263,6 +263,7 @@ DEPENDENCIES
   refinerycms-news (~> 2.0.0)
   refinerycms-page-images (~> 2.0.0)
   refinerycms-search (~> 2.0.0)!
+  refinerycms-settings
   refinerycms-videojs
   sass-rails (~> 3.2.3)
   sqlite3

@@ -1,6 +1,6 @@
 SamplCms::Application.routes.draw do
-
-  get "members/new"
+  
+  resources :members
   
   match '/signup', to: 'members#new'
   

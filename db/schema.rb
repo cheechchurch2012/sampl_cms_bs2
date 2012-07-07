@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120629022313) do
+ActiveRecord::Schema.define(:version => 20120707210851) do
+
+  create_table "members", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
+  end
+
+  add_index "members", ["email"], :name => "index_members_on_email", :unique => true
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"

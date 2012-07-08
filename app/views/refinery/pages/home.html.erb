@@ -23,8 +23,17 @@
           <li class="nav-header"><a href="#">PEOPLE</a></li>
           <li class="nav-header"><a href="#">WORKSHOPS</a></li>
           <li class="nav-header"><a href="#">LECTURES</a></li>
-          <li class="nav-header"><a href="/signin">MEMBERS</a></li>
-          <li class="nav-header"><%= link_to "SIGN OUT", '/signout', method: "delete" %></li>
+          <li class="divider"></li>
+          <% if signed_in_member? %>
+          <li class="nav-header"><%= link_to "MEMBERS",  '#' %></li>
+          <li class="nav-header"><%= link_to "ACCOUNT",  '#' %></li>
+          <li><%= link_to "Profile",  main_app.member_path(current_member) %></li>
+          <li><%= link_to "Settings", main_app.edit_member_path(current_member) %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Sign out", main_app.signout_path, method: "delete" %></li>
+          <% else %>
+          <li><%= link_to "Sign in", main_app.signin_path %></li>
+          <% end %>
         </ul>
       </div> <!-- Doormat first >
       

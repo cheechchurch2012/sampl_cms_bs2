@@ -18,4 +18,19 @@ class MembersController < ApplicationController
       render 'new'
     end
   end
+  
+  def edit
+    @member = Member.find(params[:id])
+  end
+  
+  def update
+    @member = Member.find(params[:id])
+    if @member.update_attributes(params[:member])
+      flash[:success] = "Profile updated"
+      sign_in_member @member
+      redirect_to @member
+    else
+      render 'edit'
+    end
+  end
 end

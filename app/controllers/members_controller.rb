@@ -11,6 +11,7 @@ class MembersController < ApplicationController
   def create
     @member = Member.new(params[:member])
     if @member.save
+      sign_in_member @member
       flash[:success] = "Welcome to the IPSE Members Site!"
       redirect_to @member
     else

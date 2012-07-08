@@ -1,4 +1,5 @@
 module ApplicationHelper
+  
   def custom_menu_branch_css(local_assigns)
     options = local_assigns.dup
     options.update(:sibling_count => options[:menu_branch].shown_siblings.length) unless options[:sibling_count]
